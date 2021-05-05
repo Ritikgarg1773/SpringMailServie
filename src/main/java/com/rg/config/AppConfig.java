@@ -1,4 +1,5 @@
 package com.rg.config;
+/* Source: https://www.youtube.com/watch?v=yY-Vp89zaTQ&list=PL8eVfvtsx6EqEVbESAwMOJsJ_ra7dAcIv */
 
 import java.util.Properties;
 
@@ -10,13 +11,14 @@ import org.springframework.mail.javamail.JavaMailSenderImpl;
 @Configuration
 @ComponentScan("com.rg")
 public class AppConfig {
+	//This is just the backend part, We will implement the GUI part in Spring MVC
 	@Bean
 	public JavaMailSenderImpl jmsi() {
 		JavaMailSenderImpl jmsi = new JavaMailSenderImpl();
 		jmsi.setHost("smtp.gmail.com");
 		jmsi.setPort(587);
-		jmsi.setUsername("ritik18305@iiitd.ac.in");
-		jmsi.setPassword("Admin@2000");
+		jmsi.setUsername("ritikgarg.****@gmail.com");
+		jmsi.setPassword("******");
 		jmsi.setJavaMailProperties(prop());
 		return jmsi;
 	}
